@@ -188,17 +188,24 @@ body .DO .wrapper .illustration img {
 }
 body .RE {
   height: 50vh;
-  display: grid;
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: url("../static/images/sunset.gif") no-repeat center/cover;
-  position: relative;
 }
 body .RE h2 {
   text-transform: uppercase;
-  position: absolute;
-  bottom: 14rem;
   color: aliceblue;
-  display: inline;
   font-size: 7rem;
 }
 body .RE p {
@@ -206,12 +213,11 @@ body .RE p {
   font-style: italic;
   color: aliceblue;
   text-transform: capitalize;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 @media screen and (width < 768px) {
   body .RE h2 {
     font-size: 4rem;
-    bottom: 15rem;
   }
   body .RE p {
     font-size: 1rem;

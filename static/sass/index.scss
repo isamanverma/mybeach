@@ -179,17 +179,15 @@ body {
 
     .RE {
         height: 50vh;
-        display: grid;
-        place-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         background: url('../static/images/sunset.gif') no-repeat center / cover;
-        position: relative;
 
         h2 {
             text-transform: uppercase;
-            position: absolute;
-            bottom: 14rem;
             color: aliceblue;
-            display: inline;
             font-size: 7rem;
         }
 
@@ -198,13 +196,12 @@ body {
             font-style: italic;
             color: aliceblue;
             text-transform: capitalize;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
         @media screen and (width<768px) {
             h2 {
                 font-size: 4rem;
-                bottom: 15rem;
             }
 
             p {
