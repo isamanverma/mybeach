@@ -174,7 +174,7 @@ body .DO .wrapper .text .buttons a .explore :focus {
   }
 }
 body .DO .wrapper .illustration img {
-  width: 100%;
+  width: 120%;
 }
 @media screen and (width < 768px) {
   body .DO .wrapper .illustration {
