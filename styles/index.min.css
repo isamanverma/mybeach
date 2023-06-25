@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
 body {
   margin: 0;
   padding: 0;
@@ -16,16 +17,32 @@ body :where(img, svg, video) {
 }
 body :where(section) {
   height: 100vh;
-  padding: 5rem;
+  padding-inline: 5rem;
 }
 @media screen and (width < 768px) {
   body :where(section) {
-    height: 80vh;
-    padding: 1rem;
+    padding-inline: 1rem;
   }
 }
 body .DO {
   background-color: #fae2e9;
+  display: grid;
+  place-items: center;
+}
+body .DO .pattern {
+  width: 100%;
+  height: 10vh;
+  --s: 90px;
+  --d: 5px;
+  --_g: #fff220 36deg, #0000 0;
+  background: conic-gradient(from 162deg at calc(var(--s) * 0.5) calc(var(--s) * 0.68), var(--_g)), conic-gradient(from 18deg at calc(var(--s) * 0.19) calc(var(--s) * 0.59), var(--_g)), conic-gradient(from 306deg at calc(var(--s) * 0.81) calc(var(--s) * 0.59), var(--_g)), #e181c2;
+  background-position: 0 calc(var(--s) * 0.35);
+  background-size: calc(var(--s) + var(--d)) calc(var(--s) + var(--d));
+}
+@media screen and (width < 768px) {
+  body .DO .pattern {
+    height: 5rem;
+  }
 }
 body .DO .wrapper {
   display: grid;
@@ -52,10 +69,23 @@ body .DO .wrapper .text {
 body .DO .wrapper .text h1 {
   font-size: 7em;
   margin-block: 0.5rem;
+  line-height: 7rem;
+}
+body .DO .wrapper .text h1::first-letter {
+  font-size: 9.5rem;
+  color: #e737d3;
+  text-shadow: 3px 2px #4f2761;
+}
+body .DO .wrapper .text h1 sub {
+  font-size: 3rem;
+  font-family: Playfair Display;
+  font-weight: 500;
+  font-style: italic;
 }
 @media screen and (width < 768px) {
   body .DO .wrapper .text h1 {
     font-size: 3rem;
+    line-height: 4rem;
   }
 }
 body .DO .wrapper .text p {
@@ -153,7 +183,7 @@ body .DO .wrapper .illustration img {
             order: 1;
   }
   body .DO .wrapper .illustration img {
-    width: 100%;
+    width: 80%;
   }
 }
 body .RE {
@@ -166,7 +196,7 @@ body .RE {
 body .RE h2 {
   text-transform: uppercase;
   position: absolute;
-  bottom: 18rem;
+  bottom: 14rem;
   color: aliceblue;
   display: inline;
   font-size: 7rem;
