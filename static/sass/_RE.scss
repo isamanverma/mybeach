@@ -7,12 +7,14 @@
     background: url('../static/images/sunset.gif') no-repeat center / cover;
 
     h2 {
+        font-family: $ff-title;
         text-transform: uppercase;
         color: aliceblue;
-        font-size: 7rem;
+        font-size: 5rem;
     }
 
     p {
+
         font-weight: bold;
         font-style: italic;
         color: aliceblue;
@@ -22,7 +24,7 @@
 
     @media screen and (width<768px) {
         h2 {
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
 
         p {

@@ -1,4 +1,5 @@
 @import './mixins';
+@import './variables';
 
 .DO {
     background-color: $bg-clr;
@@ -45,22 +46,32 @@
             gap: 1rem;
 
             h1 {
-                &::first-letter {
-                    font-size: 9.5rem;
-                    color: #e737d3;
-                    text-shadow: 3px 2px $font-clr;
-                }
-
-                sub {
-                    font-size: 3rem;
-                    font-family: $ff-subtext;
-                    font-weight: 500;
-                    font-style: italic;
-                }
-
+                font-family: $ff-title;
                 font-size: 7em;
                 margin-block: 0.5rem;
                 line-height: 7rem;
+
+                &::first-letter {
+                    font-size: 15rem;
+                    color: #e737d3;
+                    text-shadow: 3px 3px $font-clr;
+
+                    @media screen and (width<768px) {
+                        font-size: 7rem;
+                    }
+                }
+
+                sub {
+                    font-size: 2.5rem;
+                    font-family: $ff-subtext;
+                    font-weight: 500;
+                    font-style: italic;
+
+                    @media screen and (width<768px) {
+                        font-size: 1.75rem;
+                    }
+                }
+
 
                 @media screen and (width<768px) {
                     font-size: 3rem;
@@ -79,6 +90,7 @@
             }
 
             .buttons {
+                font-family: $ff-title;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;

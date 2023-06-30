@@ -1,7 +1,28 @@
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
 $bg-clr: #fae2e9;
 $font-clr: #4f2761;
-$ff-subtext: Playfair Display;
+$white-clr: #f6f6f6;
+$accent-clr: #e737d3;
 
-@import './DO';
-@import './RE';
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
+
+@font-face {
+    font-family: Starborn;
+    src: url(../static/fonts/Starborn.ttf);
+}
+
+$ff-subtext: Starborn;
+
+@font-face {
+    font-family: Alte;
+    src: url(../static/fonts/AlteHaasGroteskRegular.ttf);
+    font-display: swap;
+}
+
+$ff-text: Alte;
+
+@font-face {
+    font-family: Cocogoose;
+    src: url(../static/fonts/Cocogoose.ttf);
+}
+
+$ff-title: Cocogoose;

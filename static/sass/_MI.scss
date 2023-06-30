@@ -1,0 +1,39 @@
+@import './variables';
+
+.MI {
+    background: $bg-clr;
+    margin: 0;
+    padding: 0;
+
+    marquee {
+        padding-block: 0.5em;
+        margin-block: 1em;
+        background: $accent-clr;
+        transition: background 1250ms ease;
+
+        &:hover {
+            background: #181818;
+            cursor: pointer;
+        }
+
+        // &:has(li:hover) {
+        //     background: #181818;
+        // }
+
+        li {
+            all: unset;
+            font-size: 5rem;
+            margin: 1em;
+            font-family: $ff-subtext;
+            color: #58edf5;
+
+            transition: color 500ms ease;
+
+            &:hover {
+                color: $accent-clr;
+                cursor: pointer;
+            }
+
+        }
+    }
+}
