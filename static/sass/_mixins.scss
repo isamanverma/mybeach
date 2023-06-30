@@ -1,0 +1,24 @@
+@mixin button($dark, $light ) {
+    all: unset;
+    background: $dark;
+    padding: 0.75em 1.5em;
+    font-size: 1.1rem;
+    color: $light;
+    border-radius: 34px;
+    transition:
+        background-color 400ms ease,
+        color 400ms ease-in-out,
+        box-shadow 400ms ease;
+
+
+    @media screen and (width<768px) {
+        font-size: 0.9rem;
+    }
+
+    &:hover,
+    :focus {
+        background-color: $light;
+        color: $dark;
+        box-shadow: 3px 3px $dark;
+    }
+}
